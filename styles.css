@@ -6,7 +6,11 @@ header {
 }
 #home header {
     background:  no-repeat lightgrey url(images/cliff_ocean.jpg);
-    background-size: 1500px;
+    /*background-size: 1500px;*/
+    background-position: bottom;
+    background-size: cover;
+    height:600px;
+    width: 100%;
 }
 .main-header {
     background-color:rgb(255, 255, 255, 0.8) ;
@@ -30,7 +34,7 @@ header {
 .main-menu ul li {
     list-style-type: none;
     display: inline-block;
-    float: left;
+    /* float:left; */
     padding-left: 25px;
     padding-right: 25px;
     border-left: 1px solid rgba(202, 204, 202, 0.6);
@@ -74,7 +78,7 @@ section {
     background-color: #4288C3;
 }
 section #partners {  
-    width: 1200px;
+    width: 100%;
     padding: 2em 0 2em 0;
     margin: 0 auto;
     text-align: center;
@@ -87,7 +91,7 @@ section #partners .partner {
     border-radius: 50%;
 }
 section #partners .partner img {
-    width: 90px;
+    width: 1005;
     height: 90px;
 }
 
@@ -117,7 +121,7 @@ footer #disclaimer p {
     text-align: center;
 }
 footer #nondisclaimer .social .fa {
-    padding: 15px;
+    padding: 20px;
     font-size: 15px;
     width: 15px;
     text-align: center;
@@ -150,7 +154,17 @@ footer #nondisclaimer .social .fa-instagram {
 /* ACTIVATE BELOW WHEN TESTING NAVIGATION AND OTHERS FOR RWD */
 
 /* Media Queries */
-/*@media (max-width: 768px) {
+@media (max-width: 576px) {
+    .content {
+        grid-template-columns: 100%;
+        display: grid;
+    }
+    /* #partners {
+        grid-template-columns: 100%;
+        display: grid;} */
+    }
+
+@media (max-width: 768px) {
     footer #nondisclaimer .copy {
         padding: 3.5em 0em 3.5em 0em;
         text-align: center;
@@ -163,6 +177,10 @@ footer #nondisclaimer .social .fa-instagram {
         text-align: center;
         float: none;
       }
+      .content {
+        grid-template-columns: repeat(2,1fr);
+        display: grid;
+    }
 }
 
 @media (max-width: 992px) {
@@ -188,4 +206,29 @@ footer #nondisclaimer .social .fa-instagram {
         min-height: 450px;
         margin-top: 1em;
       }
-} */
+      .content {
+        grid-template-columns: repeat(2,1fr);
+        display: grid;
+
+}
+}
+
+
+.column1{
+    border: solid lightgray 0.5px;
+    margin:0.5em;
+    padding: 1em 1em 1em 3em;
+}
+.column2{
+    border: solid lightgray 0.5px;
+    margin:0.5em;
+    padding: 1em 1em 1em 3em;
+}
+
+
+/* div[class^="col"] {
+    border: 1px solid lightgray;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 50px;
+ } */
